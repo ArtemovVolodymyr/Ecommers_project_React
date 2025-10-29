@@ -12,7 +12,7 @@ function App() {
       <Route index element={<HomePage />} />
       <Route path="checkout" element={<CheckoutPage />} />
       <Route path="orders" element={<OrdersPage />} />
-      <Route path="traking" element={<TrackingPage />} />
+      <Route path="tracking" element={<TrackingPage />} />
     </Routes>
 
   );
