@@ -1,4 +1,4 @@
-import { CheckoutHeader } from '../components/ChekoutHeader';
+import { CheckoutHeader } from './ChekoutHeader';
 import './CheckoutPage.css';
 
 
