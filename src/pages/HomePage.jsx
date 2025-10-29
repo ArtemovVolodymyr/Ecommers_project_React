@@ -4,6 +4,8 @@ import './HomePage.css';
 
 
 export function HomePage() {
+  fatch()
+
   return (
     <>
       <link rel="icon" type="image/svg+xml" href="../public/home-favicon.png" />
