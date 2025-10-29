@@ -4,8 +4,12 @@ import './HomePage.css';
 
 
 export function HomePage() {
-  fatch()
-
+  fetch('http://localhost:3000/api/products')
+  .then((response) => {
+      return response.json();
+    }).then((data) =>{
+      console.log(data);
+  })
   return (
     <>
       <link rel="icon" type="image/svg+xml" href="../public/home-favicon.png" />
