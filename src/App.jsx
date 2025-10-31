@@ -12,11 +12,11 @@ function App() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    axios.get('/api/cart-items')
+    axios.get('/api/cart-items?expend=product')
       .then((response) => {
-        setCart(response.data)
+        setCart(response.data);
       });
-  })
+  }, []);
 
 
 
