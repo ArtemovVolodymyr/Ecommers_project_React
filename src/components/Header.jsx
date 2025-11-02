@@ -1,29 +1,20 @@
 import { NavLink } from 'react-router';
 import './Header.css';
 
-
 export function Header({ cart }) {
-    let totalQuantity = 0;
-
-    cart.forEach((cartItem) =>{
-        totalQuantity += cartItem.quantity;
-    });
-
+    const totalQuantity = cart?.reduce((sum, item) => sum + item.quantity, 0) || 0;
 
     return (
         <div className="header">
             <div className="left-section">
                 <NavLink to="/" className="header-link">
-                    <img className="logo"
-                        src="images/logo-white.png" />
-                    <img className="mobile-logo"
-                        src="images/mobile-logo-white.png" />
+                    <img className="logo" src="images/logo-white.png" />
+                    <img className="mobile-logo" src="images/mobile-logo-white.png" />
                 </NavLink>
             </div>
 
             <div className="middle-section">
                 <input className="search-bar" type="text" placeholder="Search" />
-
                 <button className="search-button">
                     <img className="search-icon" src="images/icons/search-icon.png" />
                 </button>
@@ -31,7 +22,6 @@ export function Header({ cart }) {
 
             <div className="right-section">
                 <NavLink className="orders-link header-link" to="/orders">
-
                     <span className="orders-text">Orders</span>
                 </NavLink>
 
