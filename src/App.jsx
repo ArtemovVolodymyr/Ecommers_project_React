@@ -8,6 +8,9 @@ import { TrackingPage } from './pages/TrackingPage';
 import { Error404Page } from './pages/Error404Page';
 import './App.css'
 
+window.axios = axios;
+
+
 function App() {
   const [cart, setCart] = useState([]);
 
