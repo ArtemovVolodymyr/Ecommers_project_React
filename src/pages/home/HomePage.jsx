@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router';
 import { Header } from '../../components/Header';
-import { ProductGrid } from './ProductsGrid';
+import { ProductsGrid } from './ProductsGrid';
 import './HomePage.css';
 
 
@@ -31,7 +31,7 @@ export function HomePage({ cart, loadCart }) {
       <title>Ecommers Project</title>
 
       <div className="home-page">
-        <ProductGrid products={products} loadCart={loadCart} />
+        <ProductsGrid products={products} loadCart={loadCart} />
       </div>
     </>
 
