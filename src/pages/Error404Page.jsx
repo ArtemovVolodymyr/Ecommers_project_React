@@ -1,12 +1,12 @@
 import { Header } from "../components/Header";
 import './Error404Page.css';
 
-export function Error404Page() {
+export function Error404Page({ cart }) {
     return (
         <>
             <link rel="icon" type="image/svg+xml" href="../public/404-favicon.png" />
 
-            <Header />
+            <Header cart={cart}/>
             <title>404</title>
             <div class="main">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="470" height="290" viewBox="0 0 470 290">

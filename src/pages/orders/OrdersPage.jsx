@@ -4,7 +4,7 @@ import { Header } from '../../components/Header';
 import { OrdersGrid } from './OrdersGrid';
 import './OrdersPage.css'
 
-export function OrdersPage({ cart }) {
+export function OrdersPage({ cart, loadCart }) {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
@@ -20,13 +20,13 @@ export function OrdersPage({ cart }) {
             <link rel="icon" type="image/svg+xml" href="../public/orders-favicon.png" />
 
 
-            <Header cart={cart} />
+            <Header cart={cart} loadCart={loadCart}/>
             <title>Orders</title>
 
             <div className="orders-page">
                 <div className="page-title">Your Orders</div>
 
-                <OrdersGrid orders={orders} />
+                <OrdersGrid orders={orders} loadCart={loadCart}/>
             </div>
         </>
     );
